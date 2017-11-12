@@ -1,0 +1,4 @@
+1. Node.js and NPM (check by node -v & npm -v)
+2. npm install -g cordova ionic
+3. Android Studios or Android SDK
+4. VS Code

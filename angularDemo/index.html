@@ -1,0 +1,44 @@
+<html ng-app="todoApp">
+
+<head>
+    <title>Angular Demo</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <!-- <input type="text" ng-model="name"/>
+    <h1>{{name}}</h1>
+    <a href="https://www.{{name}}.com" target="_blank">{{name}}</a>
+    <img src="{{name}}">
+
+
+    <div ng-if="name">
+            <h4>Create Me</h4>
+        </div>
+
+    <div ng-if="!name">
+        <h4>Show me</h4>
+    </div>
+
+    <button ng-click=" name=!name ">Fire Me</button> -->
+
+    <div ng-controller="todoCtrl as todo">
+        <input type="text" ng-model="todo.task"
+         placeholder="Todo1">
+         <button ng-click="todo.addTask()">Add</button>
+        <ul>
+            <li ng-repeat="t in todo.tasks track by $index">
+                {{$index}} - {{t}}
+            </li>
+        </ul>
+    </div>
+<!-- 
+    <div ng-controller="todoCtrl as todo1">
+        <input type="text" ng-model="todo1.task"
+         placeholder="Todo2">
+        <h2>{{todo1.task}}</h2>
+    </div> -->
+</body>
+
+</html>
